@@ -1,0 +1,17 @@
+UNISWAP POOL APIs-
+//To get newly creates Uniswap pools, we need to use the following GraphQL API.
+{
+  ethereum {
+    arguments(smartContractAddress: {is: "0x5c69bee701ef814a2b6a3edd4b1652cb9cc5aa6f"}, smartContractEvent: {is: "PairCreated"}, options: {desc: "block.height", limit: 3}) {
+      block {
+        height
+      }
+      argument {
+        name
+      }
+      reference {
+        address
+      }
+    }
+  }
+}
