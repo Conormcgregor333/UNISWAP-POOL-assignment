@@ -1,0 +1,21 @@
+TOKENS
+//To know the tokens details,we run the following query with the token address.
+
+{
+  ethereum {
+    address(address: {is: "0x930ed81ad809603baf727117385d01f04354612e"}) {
+      annotation
+      address
+      smartContract {
+        contractType
+        currency {
+          symbol
+          name
+          decimals
+          tokenType
+        }
+      }
+      balance
+    }
+  }
+}

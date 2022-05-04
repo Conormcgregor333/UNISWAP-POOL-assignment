@@ -1,0 +1,26 @@
+Pair Pool Code
+{
+  ethereum {
+    transfers(options: {asc: "block.timestamp.time", limit: 2}, amount: {gt: 0}, receiver: {is: "0x7bc3a77b1b8daa4bf4b38c710119b932c5b27925"}) {
+      block {
+        timestamp {
+          time(format: "%Y-%m-%d %H:%M:%S")
+        }
+        height
+      }
+      address: sender {
+        address
+        annotation
+      }
+      currency {
+        address
+        symbol
+      }
+      amount
+      transaction {
+        hash
+      }
+      external
+    }
+  }
+}
